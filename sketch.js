@@ -11,7 +11,7 @@ var particles = [];
 var flowfield;
 
 function setup() {
-  createCanvas(1366, 635);
+  createCanvas(2266, 3402);
   colorMode(HSB, 477);
   cols = floor(width / scl);
   rows = floor(height / scl);
@@ -36,7 +36,7 @@ function draw() {
       v.setMag(1);
       flowfield[index] = v;
       xoff += inc;
-      stroke(0, 50);
+      stroke(0, 100);
       // push();
       // translate(x * scl, y * scl);
       // rotate(v.heading());
