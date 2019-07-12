@@ -2,7 +2,7 @@ function Particle() {
     this.pos = createVector(random(width), random(height));
     this.vel = createVector(0, 0);
     this.acc = createVector(0, 0);
-    this.maxspeed = 4;
+    this.maxspeed = 8;
     this.h = 0;
   
     this.prevPos = this.pos.copy();
@@ -32,7 +32,7 @@ function Particle() {
       if (this.h > 255) {
         this.h = 0;
       }
-      strokeWeight(1.5);
+      strokeWeight(3);
       line(this.pos.x, this.pos.y, this.prevPos.x, this.prevPos.y);
       this.updatePrev();
     }
