@@ -12,14 +12,14 @@ var flowfield;
 
 function setup() {
   createCanvas(2266, 3402);
-  colorMode(HSB, 477);
+  colorMode(HSB, 475);
   cols = floor(width / scl);
   rows = floor(height / scl);
   fr = createP('');
 
   flowfield = new Array(cols * rows);
 
-  for (var i = 0; i < 300; i++) {
+  for (var i = 0; i < 600; i++) {
     particles[i] = new Particle();
   }
   background(51);
@@ -36,7 +36,7 @@ function draw() {
       v.setMag(1);
       flowfield[index] = v;
       xoff += inc;
-      stroke(0, 100);
+      stroke(0, 50);
       // push();
       // translate(x * scl, y * scl);
       // rotate(v.heading());
@@ -46,7 +46,7 @@ function draw() {
     }
     yoff += inc;
 
-    zoff += 0.0003;
+    zoff += 0.0004;
   }
 
   for (var i = 0; i < particles.length; i++) {
